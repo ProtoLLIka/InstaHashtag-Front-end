@@ -1,0 +1,77 @@
+@whiteLightTheme : #ffffff;
+@hoverColor      : #02020218;
+@invisible       : #ffffff00;
+
+.noteListContainer {
+    font-family     : Roboto, sans-serif;
+    width           : 700px;
+    height          : 300px;
+    margin          : 0 auto;
+    background-color: @whiteLightTheme;
+    padding         : 10px;
+}
+
+.searchContainer {
+    position        : relative;
+    display         : flex;
+    margin          : 0px 0px 10px 0px;
+    background-color: @invisible;
+
+    ::placeholder {
+        padding: 2px 6px 2px 1px;
+    }
+
+    input {
+        border          : 3px solid @invisible;
+        border-radius   : 5px 5px;
+        padding         : 2px 6px 2px 15px;
+        height          : 30px;
+        font-size       : 18px;
+        width           : 100%;
+        outline         : 0;
+        background-color: @hoverColor;
+
+        &:focus {
+            border          : 3px solid #3fa0da;
+            background-color: @whiteLightTheme;
+        }
+    }
+
+
+}
+
+.listContainer {
+    overflow-y: scroll;
+    height    : 90%;
+
+    span {
+        margin       : 0 5px;
+        text-align   : left;
+        display      : inline-block;
+        width        : 100%;
+        overflow     : hidden;
+        text-overflow: ellipsis;
+        white-space  : nowrap;
+    }
+
+    ul {
+        margin         : 0 0;
+        padding        : 0px;
+        list-style-type: none;
+        table-layout   : fixed;
+        text-align     : center;
+        width          : 100%;
+        border-collapse: collapse;
+
+        li {
+            cursor          : pointer;
+            background-color: @whiteLightTheme;
+            border          : 1px solid #f2f2f2;
+            padding         : 10px;
+
+            &:hover {
+                background: @hoverColor; //linear-gradient(to left, #6e67e2, #499df7);
+            }
+        }
+    }
+}
